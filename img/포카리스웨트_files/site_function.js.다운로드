@@ -1,0 +1,57 @@
+//MOBILE MENU
+jQuery("header .nav .nav-icon").click(function() {
+    jQuery(this).toggleClass("active");
+    jQuery("header .nav .nav_wrap").toggleClass("active");
+});
+
+//열려있는 sub-menu의 화살표 확인
+jQuery(document).ready(function() {
+
+    jQuery('.pc_ver .nav-list li a').mouseenter(function() {
+        jQuery(this).next('.sub-menu').stop().slideDown().parents(".nav-list li").siblings().children(".sub-menu:visible").stop().slideUp();
+    });
+
+    jQuery('.pc_ver .nav-list li .sub-menu').mouseleave(function() {
+        jQuery(this).slideUp();
+    });
+
+    //sub-menu 자동 열림
+    jQuery(".mobile_ver .nav-list>li.current-menu-parent").children(".sub-menu").css("display", "block");
+
+    jQuery(".mobile_ver .sub-menu").each(function() {
+        var is_display = jQuery(this).css("display");
+        if (is_display == "block") jQuery(this).parent().addClass("change");
+    });
+});
+
+//sub-menu effect 및 화살표 effect
+jQuery(document).on("click", ".mobile_ver .nav-list>.menu-item-has-children>a", function() {
+
+    var is_display = jQuery(this).next(".sub-menu").css("display");
+    if (is_display == "block") {
+        jQuery(this).next(".sub-menu").stop().slideUp();
+        //화살표 effect
+        jQuery(this).parent().removeClass('change');
+    } else {
+        jQuery(".sub-menu").stop().slideUp();
+        jQuery(this).next(".sub-menu").stop().slideToggle();
+        //화살표 effect
+        jQuery(".mobile_ver .nav-list>li").removeClass('change');
+        jQuery(this).parent().addClass('change');
+    }
+    return false;
+});
+
+//to_top
+jQuery('.to_top').click(function() {
+    jQuery('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+    return false;
+});
+
+
+//언어 선택
+jQuery(".language a").click(function() {
+    location.reload();
+});

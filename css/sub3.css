@@ -1,0 +1,174 @@
+@import url(common.css);
+@import url(header.css);
+
+@font-face {
+    font-family: 'SUIT-ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: 'SUIT-ExtraLight';
+}
+
+/*___________________________________________content01 */
+.band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    
+  }
+  
+  @media only screen and (min-width: 500px) {
+    .band {
+      grid-template-columns: 1fr 1fr;
+    }  
+    .item-1 {
+    grid-column: 1/ span 2;
+    }
+    .item-1 h1 {
+      font-size: 30px;
+    }
+  }
+  
+  @media only screen and (min-width: 850px) {
+    .band {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  
+  /* card */
+  
+  .card {
+    
+    min-height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #444;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+  
+  .card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+  
+  .card article {
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+    
+  }
+  .card .thumb1, .thumb2, .thumb3 ,.thumb4,.thumb5,.thumb6,.thumb7,.thumb8
+  ,.thumb9 ,.thumb10{
+   
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .card p { 
+    flex: 1; /* make p grow to fill available space*/
+    line-height: 1.4;
+  }
+  
+  /* typography */
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .card span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 2em 0 0 0;
+  }
+ 
+  .thumb1{
+      background: url(../img/sports_img1.jpg);
+  }
+
+  .thumb2{
+    background: url(../img/sports_img2.jpg);
+}
+.thumb3{
+    background: url(../img/sports_img3.jpg);
+}
+
+.thumb4{
+    background: url(../img/sports_img4.jpg);
+}
+.thumb5{
+    background: url(../img/sports_sl1_1.jpg);
+}
+.thumb6{
+    background: url(../img/sports_sl1_2.jpg);
+}
+
+.thumb7{background: url(../img/sports_sl1_3.jpg);}
+.thumb8{background: url(../img/sports_sl2_1.jpg);}
+.thumb9{background: url(../img/sports_sl2_2.jpg);}
+.thumb10{background: url(../img/sports_sl2_3.jpg);}
+
+
+
+
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
+}

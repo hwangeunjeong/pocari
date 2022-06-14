@@ -1,0 +1,530 @@
+@import url(common.css);
+@import url(header.css);
+
+@font-face {
+    font-family: 'SUIT-ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: 'SUIT-ExtraLight';
+}
+
+.mouseBox {
+    position: relative;
+    top: -400px;
+    width: 100px;
+    height: 200px;
+    color: white;
+    margin: 0 auto;
+}
+
+/*___________________________________________content01 */
+#content1 {
+    width: 100%;
+    height: 700px;
+    opacity: 0;
+}
+
+/* 텍스트 */
+.ion_text {
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.ion_text h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #088ae7;
+    margin-top: 50px;
+    font-family: 'SUIT-Bold';
+
+}
+
+.ion_text h2 {
+    text-align: center;
+    color: #5e5e5e;
+    font-size: 20px;
+}
+
+.ion_text ul li {
+    width: 1200px;
+    height: 200px;
+    margin: 0 auto;
+    background: white;
+    bottom: 50px;
+    margin-left: 350px;
+}
+
+
+/* 이미지 */
+.ion_daily {
+    width: 1000px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.ion_daily ul li {
+    float: left;
+    padding: 10px;
+}
+
+.ion_daily .block1 {
+    width: 304px;
+    height: 306px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    position: absolute;
+    text-align: center;
+    color: #444444;
+    font-family: 'SUIT-Bold';
+}
+
+.ion_daily ul li:hover .block1 {
+    opacity: 1;
+    transform: scaleY(1.1);
+    cursor: pointer;
+}
+
+.ion_daliy ul li:hover .block1 p {
+    text-transform: uppercase;
+    width: 140px;
+    padding: 10px 0;
+}
+
+.ion_daily .block2 {
+    width: 304px;
+    height: 306px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    position: absolute;
+    text-align: center;
+    color: #444444;
+    font-family: 'SUIT-Bold';
+}
+
+.ion_daily ul li:hover .block2 {
+    opacity: 1;
+    transform: scaleY(1.1);
+    cursor: pointer;
+}
+
+.ion_daliy ul li:hover .block2 p {
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    width: 140px;
+}
+
+.ion_daily .block3 {
+    width: 304px;
+    height: 306px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    color: #444444;
+    font-family: 'SUIT-Bold';
+}
+
+.ion_daily ul li:hover .block3 {
+    opacity: 1;
+    transform: scaleY(1.1);
+}
+
+.ion_daliy ul li:hover .block3 p {
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    width: 140px;
+}
+
+
+/*___________________________________________content02 */
+#content2 {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 400px;
+    background-color: #eaeaea;
+    opacity: 0;
+
+}
+
+.ion_yoga {
+    width: 1900px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.ion_text02 {
+    width: 500px;
+    float: left;
+    height: 300px;
+    margin-left: 500px;
+    margin-top: 100px;
+    /* position: absolute; */
+}
+
+.ion_text02 ul li p {
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.ion_text02 .tit {
+    font-size: 30px;
+    color: #444444;
+}
+
+.ion_text02 .tit .color {
+    color: #088ae7;
+}
+
+.ion_text02 .txt {
+    font-size: 15px;
+    margin-top: 50px;
+    color: #444444;
+}
+
+.ion_img {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    float: right;
+    margin-bottom: 800px;
+    margin-left: 500px;
+    display: none;
+}
+
+
+
+/*___________________________________________content03 */
+#content3 {
+    width: 100%;
+    height: 700px;
+    background-color: #eaeaea;
+    margin-left: -500px;
+    max-width: 100%;
+    opacity: 0;
+}
+
+.ion-b {
+    /* 전체 */
+    width: 1617px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.ion-b .plu {
+    float: left;
+}
+
+.ion-b .bozon {
+    float: right;
+}
+
+.plutxt {
+    width: 700px;
+    height: 200px;
+    top: 50px;
+    text-align: center;
+}
+
+/* text */
+.con1txt {
+    font-family: 'SUIT-Bold';
+    color: #00a7e3;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.con2txt {
+    font-size: 30px;
+    color: #444444;
+
+}
+
+.con3txt {
+    color: #444444;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.bozontxt {
+    width: 300px;
+    height: 200px;
+}
+
+/*___________________________________________content04 */
+#content4 {
+    width: 100%;
+    height: 800px;
+    margin-top: 100px;
+    position: relative;
+
+
+}
+
+.Iam {
+    padding: 2em 5em;
+    color: #088ae7;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+
+
+}
+
+.Iam p {
+    height: 50px;
+    margin-right: 0.3em;
+
+
+}
+
+.Iam b {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    top: 40px;
+}
+
+.Iam .innerIam {
+    display: inline-block;
+    color: #444444;
+    position: relative;
+    white-space: nowrap;
+    margin-left: 510px;
+    font-size: 40px;
+
+
+
+    /*animation*/
+    -webkit-animation: move 5s;
+    -moz-animation: move 5s;
+    -ms-animation: move 5s;
+    -o-animation: move 5s;
+    animation: move 5s;
+    /*animation-iteration-count*/
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    /*animation-delay*/
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes move {
+    0% {
+        top: 0px;
+    }
+
+    20% {
+        top: -50px;
+    }
+
+    40% {
+        top: -100px;
+    }
+
+    60% {
+        top: -150px;
+    }
+
+    80% {
+        top: -200px;
+    }
+}
+
+@-webkit-keyframes move {
+    0% {
+        top: 0px;
+    }
+
+    20% {
+        top: -50px;
+    }
+
+    40% {
+        top: -100px;
+    }
+
+    60% {
+        top: -150px;
+    }
+
+    80% {
+        top: -200px;
+    }
+}
+
+@-moz-keyframes move {
+    0% {
+        top: 0px;
+    }
+
+    20% {
+        top: -50px;
+    }
+
+    40% {
+        top: -100px;
+    }
+
+    60% {
+        top: -150px;
+    }
+
+    80% {
+        top: -200px;
+    }
+}
+
+@-o-keyframes move {
+    0% {
+        top: 0px;
+    }
+
+    20% {
+        top: -50px;
+    }
+
+    40% {
+        top: -100px;
+    }
+
+    60% {
+        top: -150px;
+    }
+
+    80% {
+        top: -200px;
+    }
+}
+
+@keyframes move {
+    0% {
+        top: 0px;
+    }
+
+    20% {
+        top: -50px;
+    }
+
+    40% {
+        top: -100px;
+    }
+
+    60% {
+        top: -150px;
+    }
+
+    80% {
+        top: -200px;
+    }
+}
+
+.vid {
+    /* 동영상 */
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    margin-top: 50px;
+    position: absolute;
+}
+
+/*___________________________________________content05 */
+#content5 {
+    width: 100%;
+    height: 700px;
+}
+
+.txt5 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.txt_box5 {
+    width: 1200px;
+    height: 100px;
+    text-align: center;
+}
+
+.tit-2 {
+    font-size: 30px;
+    color: #444444;
+}
+
+
+.tit-2 .color {
+    color: #088ae7;
+}
+
+
+.txt_box5 p {
+    font-weight: bold;
+    color: #444444;
+}
+
+.zaimg {
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.img-list img {
+    width: 250px;
+    height: 250px;
+}
+
+.img-list {
+    text-align: center;
+}
+
+.img-list ul {
+    display: inline-block;
+}
+
+.img-list ul li {
+    float: left;
+}
+
+.img-list ul li:nth-child(2) {
+    margin: 0 20px 20px;
+}
+
+.img-list ul li img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: all 0.5s;
+}

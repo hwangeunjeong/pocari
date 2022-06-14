@@ -1,0 +1,317 @@
+@import url(common.css);
+@import url(header.css);
+@import url(sub5.css);
+
+@font-face {
+    font-family: 'SUIT-ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;} 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;*/
+
+
+
+body{    font-family: 'SUIT-ExtraLight';
+
+  }
+ 
+
+/*___________________________________________mouse*/
+
+
+
+
+
+
+
+
+
+/*___________________________________________visual */
+
+
+#slideShowon {
+	position: relative; /*부모기준설정*/
+	overflow:hidden; /*넘치는 자식 보이지않게 */
+	width: 1920px;
+	height: 700px;
+	margin: 0 auto;
+}
+
+#slideShowon .slideon ul {
+	position: absolute;
+	width: 7680px; /*슬라이드가 가로방향일때만->이미지의 총가로길이(940*4)*/
+}
+
+#slideShowon .slideon ul li {
+	float: left;
+}
+
+/*슬라이드가 가로방향일때만 이미지 가로배열*/
+
+
+
+/*하단버튼*/
+
+#slideShowon .slideon_btn {
+	position: absolute;
+	bottom: 20px;
+	left: 420px;
+}
+
+#slideShowon .slideon_btn ul li {
+	float: left;
+	background:#fff;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	margin: 0 7px;
+	cursor: pointer;
+}
+
+#slideShowon .slideon_btn ul li.activeon {
+	background:#088ae7;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+
+/*좌우버튼*/
+#slideShowon .sideon_btn .preon {
+	position: absolute;
+	top:300px;
+	left: 30px;
+	width: 65px;
+	height: 65px;
+	background: url(../img/lbtn_off.png) no-repeat;
+}
+
+#slideShowon .sideon_btn .preon:hover {
+	background: url(../img/lbtn_on.png) no-repeat;
+	cursor: pointer;
+}
+
+#slideShowon .sideon_btn .nexon {
+	position: absolute;
+	top: 300px;
+	right: 30px;
+	width: 65px;
+	height: 65px;
+	background: url(../img/rbtn_off.png) no-repeat;
+}
+
+#slideShowon .sideon_btn .nexon:hover {
+	background: url(../img/rbtn_on.png) no-repeat;
+	cursor: pointer;
+}
+
+.i1 img{
+    
+}
+
+
+/*___________________________________________contents1 */
+#Season {
+    width: 1500px;
+    height: 900px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    font-family: 'LeferiBaseType-RegularA';
+    padding-top: 100px;
+
+    /* background:url(../img/cloud_01.png); */
+}
+
+.main-tit2{
+    text-align: center;
+    font-size:50px;
+    color: #088ae7;
+    font-family: 'SBAggroB';
+
+    
+}
+
+/* 갤러리 */
+#Season .sub1 li {
+    position: absolute;
+    top: 21px;
+    left: 28px;
+    padding-left: 50px;
+}
+
+#Season .sub1 li iframe{
+    width:500px;
+}
+
+#Season .sub1 img {
+    /*메인이미지*/
+    width: 1920px;
+    height: 700px;
+    margin-top: 150px;
+}
+
+#Season .sub1 li {
+    display: none;
+}
+
+/* #Season .sub1 li:first-child {display: block;} */
+
+#Season .sub2 {
+    position: absolute;
+    top: 370px;
+    left: 350px
+}
+
+#Season .sub2 li {
+    float: left;
+    margin-left: 50px;
+    opacity: 0.8;
+
+}
+
+#Season .sub2 li:first-child {
+    opacity: 1;
+}
+
+#Season .sub2 img {
+    /* 서브이미지 */
+    margin-top:515px;
+    position: relative;
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    right:30px;
+
+}
+
+#Season .sub2 img:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+    border:4px solid #088ae7;
+}
+
+#Season .left_btn {
+    /* 왼쪽버튼 */
+    position: absolute;
+    left:80px;
+    top: 500px;
+    z-index: 200;
+
+}
+
+#Season .right_btn {
+    /* 오른쪽버튼 */
+    position: absolute;
+    left:1450px;
+    top: 500px;
+    z-index: 200;
+
+}
+
+
+.imgText li {
+    /* 연예인이름 */
+    display: none;
+    position: absolute;
+    left: 90px;
+    bottom: 150px;
+}
+
+.imgText li:first-child {
+    display: block;
+}
+
+.imgText li strong {
+    color:#088ae7;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.imgText li{
+    color:#777777;
+}
+
+
+
+/*___________________________________________contents2 */
+#contents2{
+    width:100%;
+    height:1500px;
+}
+
+.back2{
+    width:100%;
+    background: url(../img/rainbow.jpg) no-repeat center bottom fixed;
+    height:500px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    z-index: 1000;
+    margin-top:200px;
+    
+}
+
+
+.cont2txt{
+    color:white;
+    font-size:35px;
+    width:500px;
+    padding-top:50px;
+    margin-left:100px;
+    line-height: 50px;
+}
+
+.cont2txt2{
+    font-weight: bold;
+    font-size:20px;
+}
+
+.cont2txt strong{
+    font-size:40px;
+    font-family: 'SUIT-Bold';
+
+}
+
+.video{
+    text-align: center;
+
+
+}
+
+.video2{
+    width:1400px;
+    height:300px;
+    margin:0 auto;
+}
+
+.video2 ul li{
+    float:left;
+    margin:50px;
+}
+
+.video2 ul li:hover {
+    border:5px solid #088ae7;
+    transition:all 0.1s;
+}

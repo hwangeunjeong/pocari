@@ -1,0 +1,349 @@
+@import url(common.css);
+
+@font-face {
+    font-family: 'SUIT-ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-ExtraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SUIT-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.wrap {}
+
+
+body {
+    width: 100%;
+    height:1000px;
+    font-family: 'SUIT-Bold';
+}
+
+
+header {
+    /*추가함*/
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+}
+
+#logo_01 {
+
+    position: relative;
+}
+
+/*________________로고*/
+
+.toplogo {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin-top: 20px;
+
+
+    /* background-color: red; */
+}
+
+.logo {
+    width: 80px;
+    height: 100px;
+    margin-left: 100px;
+}
+
+/* ________________메뉴*/
+.menu_toggle_btn {
+    /*전체메뉴버튼*/
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 100;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.menu_toggle_btn span {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 70%;
+    height: 4px;
+    background: #00548b;
+    content: '';
+    transition: all 0.3s;
+    margin-left: 15%;
+}
+
+.menu_toggle_btn:before,
+.menu_toggle_btn:after {
+    /*전체메뉴 가로선막대2개 생성*/
+    position: absolute;
+    left: 0;
+    width: 70%;
+    height: 4px;
+    background: #00548b;
+    content: '';
+    transition: all 0.3s;
+    margin-left: 15%;
+}
+
+.menu_toggle_btn:before {
+    transform: translateY(-12px);
+}
+
+.menu_toggle_btn:after {
+    transform: translateY(8px);
+}
+
+.menu_toggle_btn.menu-open:before {
+    transform: translateY(0px) rotate(135deg);
+}
+
+.menu_toggle_btn.menu-open:after {
+    transform: translateY(0px) rotate(-135deg);
+}
+
+.menu_toggle_btn.menu-open span {
+    opacity: 0;
+}
+
+
+/* 클릭시보이는 박스  */
+.allmenu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(9, 129, 227, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color:white;
+    padding-top: 200px;
+}
+
+.allmenu li {
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 50px;
+
+}
+
+/* ///// 서브메뉴 ///// */
+
+.submenu {
+    width: 500px;
+    height: 500px;
+    /* background-color: antiquewhite; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all 0.8s;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+}
+
+.submenu>li {
+    width: 150px;
+}
+
+.submenu>li ul {
+    display: none;
+}
+
+.submenu>li:hover>a {
+    color: #fff;
+}
+
+.submenu>li ul li {
+    padding: 10px 0px;
+}
+
+.submenu li ul li a {
+    font-size: 15px;
+}
+
+.submenu li ul li a:hover {
+    /* 서브 메뉴 호버 */
+    color: #00548b;
+    font-weight: bold;
+    transition: all 0.2s;
+    top: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.4s;
+
+}
+
+
+
+/* ______________________________비주얼*/
+/*TOP*/
+
+.top{
+    position:fixed;
+	width:100%;
+    height:60px;
+	background:rgba(255,255,255,0.7);
+    z-index:1000;
+}
+.top h1{margin:10px 0 0 90px;} /*logo*/
+.top img{width:170px;}
+
+
+
+.mainvisual{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+
+.mainvisual .visual li{   /*시작위치의 이미지->크기가 120%*/
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:999;  /*겹쳐서 글자가 선택이 안되는것을 해결하기 위해 ~~~*/
+    width:100%;
+    height:100%;
+    background:no-repeat fixed center center;
+    background-size:cover;
+    transform:scale(1.2);
+    transition:all 1.5s;
+}
+.mainvisual .visual li.imgVisible{   
+    opacity:1;
+    z-index:1000; 
+    transform:scale(1);
+}
+
+/* 비주얼이미지배경 */
+.mainvisual .visual li.main0{background-image:url(../img/sub1_01.png);}
+.mainvisual .visual li.main1{background-image:url(../img/vi_033.png);}
+.mainvisual .visual li.main2{background-image:url(../img/wall3.jpg);}
+.mainvisual .visual li.main3{background-image:url(../img/vi_07.png);}
+
+.main2 .Vimg{
+    position: absolute;
+    right:300px;
+    top:100px;
+    animation:one1 3s infinite alternate;
+}
+
+
+/*버튼*/
+
+.mainvisual .btn{
+    position:absolute;
+    top:130px;
+    left:100px;
+    z-index:2000;
+}
+.mainvisual .btn>span{
+    display:inline-block;
+    width:11px;
+    height:11px;
+    margin-right:3px;
+    background:#d5d5d6;
+    cursor:pointer;
+    
+}
+.mainvisual .btn>span.active{
+    display:inline-block;
+    width:45px;
+    height:11px;
+    background:#00548b;
+}
+
+
+/*////// 비주얼 텍스트 공통 /////*/
+
+.mainvisual .Vtext{ /*시작위치의 텍스트->Y축으로 20% 지점*/
+    opacity:0;
+    position:absolute;
+    top:30%;
+    width:100%;
+    color:#fff;
+    text-align:center;
+    transform:translateY(20%);
+    transition:all 1s;
+    font-family: 'SBAggroB';
+
+}
+
+.mainvisual .Vtext.textVisible{ /*->jQuery 에서 불러냄*/
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+.mainvisual .Vtext h3{
+    margin-bottom:30px;
+    font-weight:700;
+    font-size:70px;
+    letter-spacing:20px;
+}
+
+.mainvisual .Vtext p{
+    font-weight:100;
+    font-size:16px;
+    line-height:30px;
+    font-family: 'SUIT-ExtraLight';
+
+} 
+.mainvisual .Vtext .more{
+    width:100px;
+    height:30px;
+    border:1px solid #fff;
+    color:#fff;
+    font-size:13px;
+    margin:20px auto 0;
+    transition:all 2s;
+}
+.mainvisual .Vtext .more:hover{background:rgba(0,84,139);}
+.mainvisual .Vtext .more a{display:block;}
+
+.v_02{margin-right:1000px;
+}
+.v_03{
+    margin-right:1000px;
+}
+
+
+
+
+@keyframes one1 {
+
+    /*원애니메이션  */
+    100% {
+        top: 0%;
+    }
+
+    10% {
+        bottom: 50%;
+    }
+}
+
+
